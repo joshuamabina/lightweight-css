@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lightweight CSS &middot; Example</title>
+        <link href="../main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="brand">Lightweight CSS</h1>
+        <form>
+            <div class="form-group">
+                <label for="exampleFirstNameInput" class="form-label">First name</label>
+                <input type="text" class="form-control" id="exampleFirstNameInput" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleLastNameInput" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="exampleLastNameInput" placeholder="Your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleEmailAddress" class="form-label">Email address</label>
+                <input type="text" class="form-control" id="exampleEmailAddress" placeholder="your.name@example.com" required>
+            </div>
+            <div class="form-group">
+                <input type="radio" class="form-radio-control" id="exampleGender" required/>
+                <label for="exampleGenderFemale">Female</label>
+
+                <input type="radio" class="form-radio-control" id="exampleGender" required/>
+                <label for="exampleGenderMale">Male</label>
+
+                <input type="radio" class="form-radio-control" id="exampleGender" required/>
+                <label for="exampleGenderOther">Other</label>
+            </div>
+            <div class="form-group">
+                <label for="exampleAwesomenessLevel" class="form-label">Awesomeness level</label>
+                <select class="form-control" id="exampleAwesomenessLevel" aria-label="Awesomeness level" required>
+                    <option selected>Awesomeness level</option>
+                    <option value="1">Ridiculous</option>
+                    <option value="2">Reasonable</option>
+                    <option value="3">Lacking</option>
+                    <option value="4">Awesomeless</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleAbout" class="form-label">About</label>
+                <textarea class="form-control" id="exampleAbout" row="6" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Submit</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+        </form>
+    </body>
+</html>
