@@ -8,16 +8,25 @@ This project supports this approach with tooling. I am building Lightweight CSS 
 
 Once an MVP exists, I want to go further and design a classless, lightweight CSS library for absolute beginners, including children in the five to eight age range. At that level, friction matters even more. Removing classes reduces cognitive load. A learner should be able to write simple HTML and immediately get something that looks intentional and friendly.
 
-In this library and roadmap:
+Roadmap and what's contained in this library:
 
 - [x] Establish B&W color system.
 - [x] M3 token logic (Variables).
+- [x] Typography system (Space Grotesk & Henny Penny)
 - [ ] Responsive, fixed-width container
 - [x] Forms
-- [x] Buttons
 - [ ] Forms validation
+- [x] Buttons
+- [x] Disabled states
+- [ ] Checkboxes
+- [ ] Radio buttons
+- [ ] Switches
+- [ ] Progress indicators
 - [ ] Cards
-- [ ] Navbar
+- [ ] Top app bar
 - [ ] Pagination
-- [ ] Toasts
-- [ ] Playful typography
+- [ ] Snackbar
+- [ ] Badges
+- [ ] Date pickers
+- [ ] Time pickers
+
