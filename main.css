@@ -1,167 +1,129 @@
-@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Space+Grotesk:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Space+Grotesk:wght@400;500&display=swap");
 
 :root {
+  /* Color Tokens */
   --m3-color-surface: #ffffff;
   --m3-color-on-surface: #000000;
   --m3-color-outline: #000000;
   --m3-color-outline-variant: rgba(0, 0, 0, 0.3);
 
+  /* Interaction States */
   --m3-state-hover: rgba(0, 0, 0, 0.08);
   --m3-state-focus: rgba(0, 0, 0, 0.12);
   --m3-state-pressed: rgba(0, 0, 0, 0.16);
 
+  /* Geometry & Spacing */
   --m3-border-radius: .25rem;
   --m3-border-width: 1px;
+  --m3-spacing-edge: 1rem;
+  --m3-spacing-vertical: 1rem;
 
-  --m3-spacing-edge: 1rem;      /* 16px */
-  --m3-spacing-vertical: 1rem;  /* 16px */
-
-  --m3-font-brand: "Henny Penny", system-ui;
+  /* Typography */
   --m3-font-display: "Henny Penny", cursive;
   --m3-font-body: "Space Grotesk", sans-serif;
 
-  --m3-type-h1: 2.5rem;       /* 40px Display */
-  --m3-type-h2: 2rem;         /* 32px Headline */
-  --m3-type-h3: 1.5rem;       /* 24px Title */
-  --m3-type-body: 1rem;       /* 16px Body Large */
-  --m3-type-label: 0.875rem;  /* 14px Label Medium */
+  --m3-type-h1: 2.5rem;
+  --m3-type-h2: 2rem;
+  --m3-type-h3: 1.5rem;
+  --m3-type-body: 1rem;
+  --m3-type-label: 0.875rem;
   
   --m3-weight-regular: 400;
   --m3-weight-medium: 500;
 }
 
+/* --- Global Reset & Body --- */
 body {
   margin: 0;
-  padding: 0;
+  padding: var(--m3-spacing-edge);
   background-color: var(--m3-color-surface);
   color: var(--m3-color-on-surface);
   font-family: var(--m3-font-body);
   font-weight: var(--m3-weight-regular);
   font-size: var(--m3-type-body);
-  letter-spacing: -0.02em;
   line-height: 1.5;
+  letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
-
-  padding: var(--m3-spacing-edge);
 }
 
+/* --- Typography --- */
 h1, h2, h3 {
   font-family: var(--m3-font-display);
   font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
 }
 
-h1 { font-size: var(--m3-type-h1); line-height: 1.2; }
-h2 { font-size: var(--m3-type-h2); line-height: 1.2; }
-h3 { font-size: var(--m3-type-h3); line-height: 1.2; }
+h1 { font-size: var(--m3-type-h1); }
+h2 { font-size: var(--m3-type-h2); }
+h3 { font-size: var(--m3-type-h3); }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
+p { margin: 0 0 1rem 0; }
 
-.brand {
-  font-family: "Henny Penny";
-}
+.brand { font-family: var(--m3-font-display); }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-  justify-content: center;
-}
+/* --- Forms --- */
+.form-group { margin-bottom: 1rem; }
 
-.form-group {
-  margin-bottom: 1rem;
+.form-label {
+  display: inline-block;
+  margin-bottom: .5rem;
 }
 
 .form-control {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  background-clip: padding-box;
-
-  font-size: 1rem;
-  line-height: 1.5;
   padding: var(--m3-spacing-vertical) var(--m3-spacing-edge);
   margin-bottom: .75rem;
 
+  font-family: inherit;
+  font-size: var(--m3-type-body);
+  line-height: 1.5;
   color: var(--m3-color-on-surface);
   background-color: var(--m3-color-surface);
+  
   border: var(--m3-border-width) solid var(--m3-color-outline-variant);
   border-radius: var(--m3-border-radius);
-
+  appearance: none;
   transition: border-color .15s ease-in-out;
 }
 
 .form-control:focus {
   outline: none;
   border: 2px solid var(--m3-color-outline);
-
   padding: calc(var(--m3-spacing-vertical) - 1px) calc(var(--m3-spacing-edge) - 1px);
 }
 
-select.form-control {
-  appearance: auto;
-}
+textarea.form-control { min-height: 100px; }
 
-textarea.form-control {
-  min-height: 100px;
-}
-
-.form-radio-control, .form-check-control {
-  accent-color: #000;
-}
-
-.form-label, label.form-label {
-  display: inline-block;
-  margin-bottom: .5rem;
-}
-
+/* --- Buttons --- */
 button {
   cursor: pointer;
+  display: inline-block;
+  padding: .625rem 1.5rem;
+  
   font-family: var(--m3-font-body);
   font-weight: var(--m3-weight-medium);
   font-size: var(--m3-type-label);
-  letter-spacing: 0.1px; /* M3 label spacing */
-
-  background-color: var(--m3-color-surface);
-  background-image: none;
-  color: var(--m3-color-on-surface);
-  border: var(--m3-border-width) solid var(--m3-color-outline);
-  border-radius: var(--m3-border-radius);
-
-  padding: .625rem 1.5rem;
   line-height: 1.5;
-  transition: background-color .15s linear;
-
-  display: inline-block;
+  letter-spacing: 0.1px;
   text-align: center;
   white-space: nowrap;
   user-select: none;
+
+  color: var(--m3-color-on-surface);
+  background-color: var(--m3-color-surface);
+  border: var(--m3-border-width) solid var(--m3-color-outline);
+  border-radius: var(--m3-border-radius);
+  
+  transition: background-color .15s linear;
 }
 
-button:hover, button:focus {
-  background-color: var(--m3-state-hover);
-}
-
-button:active {
-  background-color: var(--m3-state-pressed);
-}
-
-.btn-primary:hover, .btn-primary:focus {
-  color: #fff;
-  border-color: #000;
-  background-color: rgba(0, 0, 0, 0.9);
-}
+button:hover, button:focus { background-color: var(--m3-state-hover); }
+button:active { background-color: var(--m3-state-pressed); }
 
 .btn-secondary {
   border-color: transparent;
   background-color: transparent;
 }
-
-.btn-secondary:hover, .btn-secondary:focus {
-  background-color: var(--m3-state-hover);
-}
-
