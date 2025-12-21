@@ -34,6 +34,11 @@
 
   --m3-weight-regular: 400;
   --m3-weight-medium: 500;
+
+  --m3-selection-size: 1.25rem;       /* 20px standard */
+  --m3-switch-width: 3.25rem;         /* 52px */
+  --m3-switch-height: 2rem;           /* 32px */
+  --m3-switch-handle-size: 1.5rem;    /* 24px */
 }
 
 /* --- Global Reset & Body --- */
@@ -159,6 +164,66 @@ button:not(.btn-secondary):active {
 
 .btn-secondary:active {
   background-color: var(--m3-state-focus);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: var(--m3-selection-size);
+  height: var(--m3-selection-size);
+  margin: 0;
+  cursor: pointer;
+
+  display: inline-grid;
+  place-content: center;
+  vertical-align: middle;
+
+  background-color: var(--m3-color-surface);
+  border: var(--m3-border-width) solid var(--m3-color-outline-variant);
+  transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+input[type="checkbox"] {
+  border-radius: 2px; /* M3 small shape */
+}
+
+input[type="radio"] {
+  border-radius: 50%; /* M3 circular shape */
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+  background-color: var(--m3-state-hover);
+  border-color: var(--m3-color-outline);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: none;
+  border-width: var(--m3-border-width-focus);
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--m3-color-on-surface) !important;
+  border-color: var(--m3-color-on-surface) !important;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  background-color: var(--m3-color-surface);
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--m3-color-surface);
 }
 
 /* --- Global Disabled States for Selection Controls --- */

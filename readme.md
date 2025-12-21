@@ -18,8 +18,8 @@ Roadmap and what's contained in this library:
 - [ ] Forms validation
 - [x] Buttons
 - [x] Disabled states
-- [ ] Checkboxes
-- [ ] Radio buttons
+- [x] Checkboxes
+- [x] Radio buttons
 - [ ] Switches
 - [ ] Progress indicators
 - [ ] Cards

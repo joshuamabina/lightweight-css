@@ -21,13 +21,13 @@
                     <input type="text" class="form-control" id="exampleEmailAddress" placeholder="your.name@example.com" required>
                 </div>
                 <div class="form-group">
-                    <input type="radio" class="form-radio-control" id="exampleGenderInput" name="exampleGender" required/>
+                    <input type="radio" id="exampleGenderInput" name="exampleGender" required/>
                     <label for="exampleGenderFemale">Female</label>
 
-                    <input type="radio" class="form-radio-control" id="exampleGenderInput" name="exampleGender" required/>
+                    <input type="radio" id="exampleGenderInput" name="exampleGender" required/>
                     <label for="exampleGenderMale">Male</label>
 
-                    <input type="radio" class="form-radio-control" id="exampleGenderInput" name="exampleGender" required/>
+                    <input type="radio" id="exampleGenderInput" name="exampleGender" required/>
                     <label for="exampleGenderOther">Other</label>
                 </div>
                 <div class="form-group">
@@ -46,7 +46,11 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleAbout" class="form-label">About</label>
-                    <textarea class="form-control" id="exampleAbout" row="6" required></textarea>
+                    <textarea class="form-control" id="exampleAbout" name="exampleAbout" row="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="exampleRememberMeInput" name="exampleRememberMe"/>
+                    <label for="exampleRememberMeInput">Save this information for next time</label>
                 </div>
                 <button type="submit">Submit</button>
                 <button type="reset" class="btn-secondary">Reset</button>
