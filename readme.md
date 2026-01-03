@@ -10,10 +10,13 @@ Once an MVP exists, I want to go further and design a classless, lightweight CSS
 
 Roadmap and what's contained in this library:
 
+- [ ] CSS Reset
 - [x] Establish B&W color system.
 - [x] M3 token logic (Variables).
 - [x] Typography system (Space Grotesk & Henny Penny)
 - [ ] Responsive, fixed-width container
+- [ ] Auto-grid to automatically apply a responsive grid
+- [ ] Flex-wrapper to center and stack components vertically
 - [x] Forms
 - [ ] Forms validation
 - [x] Buttons
@@ -29,4 +32,7 @@ Roadmap and what's contained in this library:
 - [ ] Badges
 - [ ] Date pickers
 - [ ] Time pickers
+- [ ] Basic animations
+- [ ] Minified assets for distribution
+
 
